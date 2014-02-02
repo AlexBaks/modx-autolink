@@ -1,0 +1,50 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      '518dbf556b618ec09784c51fe77b1b78' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":0,"namespace":"autolink","controller":"index","haslayout":1,"lang_topics":"autolink:default","assets":"","help_url":"","parent":0}',
+        'guid' => 'ad1b8d7c9f15bf27908a0cac4ffada1f',
+        'native_key' => 0,
+        'signature' => 'b69bffdd15316ca3b71a29d87bcfb69e',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'autolink',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0341b4ee6c6508ccb3734b2aba8d9e7d',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '5eeb2c29d1f8f87f12207d22aa91d254',
+  'native_key' => 'autolink',
+  'object' => '{"text":"autolink","parent":"components","action":0,"description":"autolink_menu_desc","icon":"images\\/icons\\/plugin.gif","menuindex":0,"params":"","handler":"","permissions":""}',
+);

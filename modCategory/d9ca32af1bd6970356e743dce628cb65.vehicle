@@ -1,0 +1,134 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      'd6018620214ccfc45e3ba001e200cbe6' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"tpl.autolink.item","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"<p><strong>[[+name]]<\\/strong> - <small>[[+description]]<\\/small><\\/p>","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/autolink\\/elements\\/chunks\\/chunk.item.tpl","content":"<p><strong>[[+name]]<\\/strong> - <small>[[+description]]<\\/small><\\/p>"}',
+        'guid' => 'd69d73de547222ad90e38573d9d47e10',
+        'native_key' => 0,
+        'signature' => 'bf4de5a51014af0d4dd48f237cdebf4c',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      '67ab373f1257aea98a1d1cfbc218108f' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"autolink","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"$autolink = $modx->getService(\'autolink\',\'autolink\',$modx->getOption(\'autolink_core_path\',null,$modx->getOption(\'core_path\').\'components\\/autolink\\/\').\'model\\/autolink\\/\',$scriptProperties);\\nif (!($autolink instanceof autolink)) return \'\';\\n\\n\\/**\\n * Do your snippet code here. This demo grabs 5 items from our custom table.\\n *\\/\\n$tpl = $modx->getOption(\'tpl\',$scriptProperties,\'Item\');\\n$sortBy = $modx->getOption(\'sortBy\',$scriptProperties,\'name\');\\n$sortDir = $modx->getOption(\'sortDir\',$scriptProperties,\'ASC\');\\n$limit = $modx->getOption(\'limit\',$scriptProperties,5);\\n$outputSeparator = $modx->getOption(\'outputSeparator\',$scriptProperties,\\"\\\\n\\");\\n\\n\\/* build query *\\/\\n$c = $modx->newQuery(\'autolinkItem\');\\n$c->sortby($sortBy,$sortDir);\\n$c->limit($limit);\\n$items = $modx->getCollection(\'autolinkItem\',$c);\\n\\n\\/* iterate through items *\\/\\n$list = array();\\n\\/* @var autolinkItem $item *\\/\\nforeach ($items as $item) {\\n\\t$itemArray = $item->toArray();\\n\\t$list[] = $autolink->getChunk($tpl,$itemArray);\\n}\\n\\n\\/* output *\\/\\n$output = implode($outputSeparator,$list);\\n$toPlaceholder = $modx->getOption(\'toPlaceholder\',$scriptProperties,false);\\nif (!empty($toPlaceholder)) {\\n\\t\\/* if using a placeholder, output nothing and set output to specified placeholder *\\/\\n\\t$modx->setPlaceholder($toPlaceholder,$output);\\n\\treturn \'\';\\n}\\n\\/* by default just return output *\\/\\nreturn $output;","locked":0,"properties":"a:6:{s:3:\\"tpl\\";a:7:{s:4:\\"name\\";s:3:\\"tpl\\";s:4:\\"desc\\";s:17:\\"autolink_prop_tpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:17:\\"tpl.autolink.item\\";s:7:\\"lexicon\\";s:19:\\"autolink:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:6:\\"sortBy\\";a:7:{s:4:\\"name\\";s:6:\\"sortBy\\";s:4:\\"desc\\";s:20:\\"autolink_prop_sortBy\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:4:\\"name\\";s:7:\\"lexicon\\";s:19:\\"autolink:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:7:\\"sortDir\\";a:7:{s:4:\\"name\\";s:7:\\"sortDir\\";s:4:\\"desc\\";s:21:\\"autolink_prop_sortDir\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:2:{i:0;a:2:{s:4:\\"text\\";s:3:\\"ASC\\";s:5:\\"value\\";s:3:\\"ASC\\";}i:1;a:2:{s:4:\\"text\\";s:4:\\"DESC\\";s:5:\\"value\\";s:4:\\"DESC\\";}}s:5:\\"value\\";s:3:\\"ASC\\";s:7:\\"lexicon\\";s:19:\\"autolink:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:5:\\"limit\\";a:7:{s:4:\\"name\\";s:5:\\"limit\\";s:4:\\"desc\\";s:19:\\"autolink_prop_limit\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";i:5;s:7:\\"lexicon\\";s:19:\\"autolink:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:15:\\"outputSeparator\\";a:7:{s:4:\\"name\\";s:15:\\"outputSeparator\\";s:4:\\"desc\\";s:29:\\"autolink_prop_outputSeparator\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:1:\\"\\n\\";s:7:\\"lexicon\\";s:19:\\"autolink:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:13:\\"toPlaceholder\\";a:7:{s:4:\\"name\\";s:13:\\"toPlaceholder\\";s:4:\\"desc\\";s:27:\\"autolink_prop_toPlaceholder\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";b:0;s:7:\\"lexicon\\";s:19:\\"autolink:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"core\\/components\\/autolink\\/elements\\/snippets\\/snippet.autolink.php","content":"$autolink = $modx->getService(\'autolink\',\'autolink\',$modx->getOption(\'autolink_core_path\',null,$modx->getOption(\'core_path\').\'components\\/autolink\\/\').\'model\\/autolink\\/\',$scriptProperties);\\nif (!($autolink instanceof autolink)) return \'\';\\n\\n\\/**\\n * Do your snippet code here. This demo grabs 5 items from our custom table.\\n *\\/\\n$tpl = $modx->getOption(\'tpl\',$scriptProperties,\'Item\');\\n$sortBy = $modx->getOption(\'sortBy\',$scriptProperties,\'name\');\\n$sortDir = $modx->getOption(\'sortDir\',$scriptProperties,\'ASC\');\\n$limit = $modx->getOption(\'limit\',$scriptProperties,5);\\n$outputSeparator = $modx->getOption(\'outputSeparator\',$scriptProperties,\\"\\\\n\\");\\n\\n\\/* build query *\\/\\n$c = $modx->newQuery(\'autolinkItem\');\\n$c->sortby($sortBy,$sortDir);\\n$c->limit($limit);\\n$items = $modx->getCollection(\'autolinkItem\',$c);\\n\\n\\/* iterate through items *\\/\\n$list = array();\\n\\/* @var autolinkItem $item *\\/\\nforeach ($items as $item) {\\n\\t$itemArray = $item->toArray();\\n\\t$list[] = $autolink->getChunk($tpl,$itemArray);\\n}\\n\\n\\/* output *\\/\\n$output = implode($outputSeparator,$list);\\n$toPlaceholder = $modx->getOption(\'toPlaceholder\',$scriptProperties,false);\\nif (!empty($toPlaceholder)) {\\n\\t\\/* if using a placeholder, output nothing and set output to specified placeholder *\\/\\n\\t$modx->setPlaceholder($toPlaceholder,$output);\\n\\treturn \'\';\\n}\\n\\/* by default just return output *\\/\\nreturn $output;"}',
+        'guid' => '4426595649775c1e31d08e6d90aa3073',
+        'native_key' => 0,
+        'signature' => '07b1ce10ceee7a606438acf39bfe05a3',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      'e3735b10638391d03bbdf00b96b46bd8' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"autolink","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"$autolink = $modx->getService(\'autolink\',\'autolink\',$modx->getOption(\'autolink_core_path\',null,$modx->getOption(\'core_path\').\'components\\/autolink\\/\').\'model\\/autolink\\/\',$scriptProperties);\\nif (!($autolink instanceof autolink)) return \'\';\\n\\n\\/* build query *\\/\\n$c = $modx->newQuery(\'autolinkItem\');\\n$c->limit(10);\\n$items = $modx->getCollection(\'autolinkItem\',$c);\\n\\n\\/* iterate through items *\\/\\n\\n$list = array();\\n\\n\\/* @var autolinkItem $item *\\/\\n\\nforeach ($items as $item) {\\n    $itemArray = $item->toArray();\\n    $arr[\'name\'] = $itemArray[\'name\'];\\n    $arr[\'link\'] = \'<a href=\\"\'.$itemArray[\'description\'].\'\\">\'.$itemArray[\'name\'].\'<\\/a>\';\\n    $nameLink[] = $arr;\\n}\\n$output = $modx->resource->_output;\\n\\npreg_match_all(\'#{autoLink}(.+?){\\/autoLink}#is\', $output, $arr);\\n\\nforeach ($arr[1] as $val)\\n{\\n    $preName[] = \'{autoLink}\'.$val.\'{\\/autoLink}\';\\n    \\/\\/$redyLink[] = str_ireplace($name,$link,$val);\\n    $r = $val;\\n    foreach ($nameLink as $val2)\\n    {\\n        $r = preg_replace(\\"#\\".$val2[\'name\'].\\"#ius\\", $val2[\'link\'], $r);\\n    }\\n    $redyLink[] = $r;\\n}\\n$output = str_replace($preName,$redyLink,$output);\\n$modx->resource->_output = $output;\\n\\n\\/*\\nswitch ($modx->event->name) {\\n\\n\\tcase \'OnManagerPageInit\':\\n\\t\\t$cssFile = MODX_ASSETS_URL.\'components\\/autolink\\/css\\/mgr\\/main.css\';\\n\\t\\t$modx->regClientCSS($cssFile);\\n\\t\\tbreak;\\n        \\n    case \'OnBeforePageRender\':\\n    \\techo \'!!!!\';\\n\\t\\tbreak;    \\n\\n}*\\/","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/autolink\\/elements\\/plugins\\/plugin.autolink.php","content":"$autolink = $modx->getService(\'autolink\',\'autolink\',$modx->getOption(\'autolink_core_path\',null,$modx->getOption(\'core_path\').\'components\\/autolink\\/\').\'model\\/autolink\\/\',$scriptProperties);\\nif (!($autolink instanceof autolink)) return \'\';\\n\\n\\/* build query *\\/\\n$c = $modx->newQuery(\'autolinkItem\');\\n$c->limit(10);\\n$items = $modx->getCollection(\'autolinkItem\',$c);\\n\\n\\/* iterate through items *\\/\\n\\n$list = array();\\n\\n\\/* @var autolinkItem $item *\\/\\n\\nforeach ($items as $item) {\\n    $itemArray = $item->toArray();\\n    $arr[\'name\'] = $itemArray[\'name\'];\\n    $arr[\'link\'] = \'<a href=\\"\'.$itemArray[\'description\'].\'\\">\'.$itemArray[\'name\'].\'<\\/a>\';\\n    $nameLink[] = $arr;\\n}\\n$output = $modx->resource->_output;\\n\\npreg_match_all(\'#{autoLink}(.+?){\\/autoLink}#is\', $output, $arr);\\n\\nforeach ($arr[1] as $val)\\n{\\n    $preName[] = \'{autoLink}\'.$val.\'{\\/autoLink}\';\\n    \\/\\/$redyLink[] = str_ireplace($name,$link,$val);\\n    $r = $val;\\n    foreach ($nameLink as $val2)\\n    {\\n        $r = preg_replace(\\"#\\".$val2[\'name\'].\\"#ius\\", $val2[\'link\'], $r);\\n    }\\n    $redyLink[] = $r;\\n}\\n$output = str_replace($preName,$redyLink,$output);\\n$modx->resource->_output = $output;\\n\\n\\/*\\nswitch ($modx->event->name) {\\n\\n\\tcase \'OnManagerPageInit\':\\n\\t\\t$cssFile = MODX_ASSETS_URL.\'components\\/autolink\\/css\\/mgr\\/main.css\';\\n\\t\\t$modx->regClientCSS($cssFile);\\n\\t\\tbreak;\\n        \\n    case \'OnBeforePageRender\':\\n    \\techo \'!!!!\';\\n\\t\\tbreak;    \\n\\n}*\\/"}',
+        'guid' => 'e4e8bf3fda1eacc62bf5aeccef3c3186',
+        'native_key' => NULL,
+        'signature' => '583742187432cabdea1593bc99e41145',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '41e760d10970a52ce718ab44ec68dffe' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnWebPagePrerender","priority":0,"propertyset":0}',
+              'guid' => '6aaa667a532b7ed33a616e527582cfa3',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnWebPagePrerender',
+              ),
+              'signature' => '135cfc5ec4d4ffd584b87299f4f57edd',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'autolink',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"autolink-0.0.1-beta\\/modCategory\\/d9ca32af1bd6970356e743dce628cb65\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"autolink"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"autolink-0.0.1-beta\\/modCategory\\/d9ca32af1bd6970356e743dce628cb65\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"autolink"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"autolink-0.0.1-beta\\/modCategory\\/d9ca32af1bd6970356e743dce628cb65.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ebf838c9019538584d249b118266c688',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'd9ca32af1bd6970356e743dce628cb65',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"autolink"}',
+);

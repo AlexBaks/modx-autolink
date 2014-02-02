@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'autolink',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f5db8a278a4663a00a478056ceaa2ba1',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'cb3ff0d7fb16a0a219441473259e262c',
+  'native_key' => 'autolink_some_setting',
+  'object' => '{"key":"autolink_some_setting","value":true,"xtype":"combo-boolean","namespace":"autolink","area":"autolink_main","editedon":null}',
+);

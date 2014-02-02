@@ -1,0 +1,5 @@
+Changelog for autolink.
+
+autolink 0.0.1
+==============
+- Initial release.
